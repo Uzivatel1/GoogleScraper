@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Google Scraper";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Home" asp-action="Search" method="post">
+    @Html.AntiForgeryToken()
+    <input type="text" name="query" placeholder="Zadejte klíčové slovo" required style="width: 300px;">
+    <button type="submit">Hledat</button>
+</form>
